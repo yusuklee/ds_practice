@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo:*)",
+      "Bash(where anaconda-navigator:*)",
+      "Bash(cmd.exe //c \"echo %PATH%\" 2>/dev/null | tr ';' '\\\\n' | grep -i conda)",
+      "Bash(cmd.exe //c \"where python\" 2>/dev/null)",
+      "Bash(cmd.exe //c \"echo %PATH%\" 2>/dev/null | tr ';' '\\\\n' | grep -i \"Python310\")",
+      "Bash(powershell -Command \"[Environment]::GetEnvironmentVariable\\('Path', 'User'\\)\" 2>/dev/null)",
+      "Bash(powershell -Command \"Start-Process 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\Scripts\\\\anaconda-navigator.exe' -PassThru 2>&1; Start-Sleep -Seconds 5\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 3; Get-Process anaconda-navigator -ErrorAction SilentlyContinue | Select-Object Id, ProcessName, Responding\")",
+      "Bash(powershell -Command \"& 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\python.exe' -c \\\\\"import anaconda_navigator; print\\(anaconda_navigator.__version__\\)\\\\\"\" 2>&1)",
+      "Bash(powershell -Command \"& 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\condabin\\\\conda.bat' info\" 2>&1)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\hyuno\\\\.conda\\\\environments.txt' -Encoding UTF8\" 2>&1)",
+      "Bash(powershell -Command \"Set-Content -Path 'C:\\\\Users\\\\hyuno\\\\.conda\\\\environments.txt' -Value @\\('C:\\\\Users\\\\hyuno\\\\anaconda3', 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\envs\\\\yusuk_1'\\) -Encoding UTF8\")",
+      "Bash(powershell -Command \"& 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\condabin\\\\conda.bat' info --base\" 2>&1)",
+      "Bash(powershell -Command \"& 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\condabin\\\\conda.bat' env list\" 2>&1)",
+      "Bash(powershell -Command \"& 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\condabin\\\\conda.bat' config --show envs_dirs\" 2>&1)",
+      "Bash(powershell -Command \"& 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\condabin\\\\conda.bat' config --show channels\" 2>&1)",
+      "Bash(powershell -Command \"& 'C:\\\\Users\\\\hyuno\\\\anaconda3\\\\condabin\\\\conda.bat' config --add channels defaults\" 2>&1)",
+      "WebSearch"
+    ]
+  }
+}
